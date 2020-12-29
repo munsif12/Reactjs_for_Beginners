@@ -1,3 +1,4 @@
+import react from 'react';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -39,3 +40,21 @@ reportWebVitals();
 //     </ul>,
 //   </h4>
 // ]
+
+// TOPIC :- React fragment  
+// if we want to dont create an ectra div over elements then we can use react fragment
+
+/*<div>//if we dont wnant to create this div use react fragment
+     <h1>Rendering multiple items ... </h1>
+     <h4>There are 2 ways to do that</h4>
+</div>, */
+/*<React.Fragment>//write this line.
+     <h1>Rendering multiple items ... </h1>
+     <h4>There are 2 ways to do that</h4>
+</React.Fragment>, */
+// OR
+// if you dont want to write react.fragment use 
+// <> use insted of react.fragment 
+//   <h1>Rendering multiple items ... </h1>
+//   <h4>There are 2 ways to do that</h4>
+// </>
