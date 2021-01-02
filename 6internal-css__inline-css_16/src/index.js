@@ -17,7 +17,7 @@ ReactDOM.render(
     <h1 style={headingStyle}>Inline CSS and Internal CSS</h1>
     <p>Objects are use for <em style={title}>Internal css styling </em> the Key for object is written in camelCase and value is written in doubleOrSingle quotes ' ' <ul>
       <li>const headingStyle = {'{'}<br />
-      textAlign:'center',<br />
+      textAlign:'center',<br />{'//'}<em style={{ color: 'green' }}>key is written in kebabcase like (text-align:center) remove it to camel case</em>
       color:'red'<br />
         {'}'}</li>
       <li> {'<h1>'} style={'{'} headingStyle {'}>'} etc inside {'</h1>'} {'//'} <em style={{ color: 'green' }}>calling the object which contains the styling of heading </em> </li>
