@@ -29,13 +29,13 @@ function sum() {
 }
 function SumDefination() {
     return (
-        <p> Simple JSX component which is using a sum {sum} function</p>
+        <p> Simple JSX component which is using a sum {sum()} function</p>
     )
 }
 function ImportExp() {
     return (
         <>
-            <h1> =>> Import Components ,var and func</h1>
+            <h1> {'=>> '} Import Components ,var and func</h1>
 
             <p>if you dont want to write
             <ol>

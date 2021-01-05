@@ -8,7 +8,7 @@ function mainApp() {
             <ExpList />
             <ExpDefination />
             <SumDefination />
-            <p>{sum}</p>
+            <p>{sum()}</p>
             <ImportExp />
             <h1>{theEnd}</h1>
 
