@@ -2,11 +2,15 @@ import React, { useState } from "react";
 
 function MainApp() {
   /* USESTAES */
-  /* we can also pass objcts inside use state */
+  /* we can also pass objcts inside use state
+   and bcoz of that we get rid of usng multiple useStates for very txtField */
   var [fullName, setFullName] = useState({
     fName: "",
     lName: "",
   });
+  //used object destructuring to get rid of .operator
+  var { fName: firstName, lName: lastName } = fullName;
+
   //we are using onling one changeValue mthod to handle the changes made inside the textBox
   // before this method we were using changeValue method for ver textBox
   //becz of this we also get rid of decalring multiple useStates for each field name
@@ -17,11 +21,11 @@ function MainApp() {
       if (fieldName === "fname") {
         return {
           fName: fieldVal,
-          lName: prevVal.lName,
+          lName: lastName, //fullname.lName;
         };
       } else if (fieldName === "lname") {
         return {
-          fName: prevVal.fName,
+          fName: firstName, //fullname.fName;
           lName: fieldVal,
         };
       }
@@ -35,7 +39,7 @@ function MainApp() {
         lecture . Code's available inside Reactjs Repo
       </h6>
       <h2 className="helloName">
-        Hello ! {fullName.fName} {fullName.lName}
+        Hello ! {firstName} {lastName}
       </h2>
       <form action="" onSubmit={setUsernameOnTop}>
         <input
@@ -43,7 +47,7 @@ function MainApp() {
           type="text"
           onChange={changeValue}
           /* defaultValue="" */
-          value={fullName.fName}
+          value={firstName}
           placeholder="Name"
           name="fname"
         />
@@ -53,7 +57,7 @@ function MainApp() {
           type="text"
           onChange={changeValue}
           /* defaultValue="" */
-          value={fullName.lName}
+          value={lastName}
           placeholder="Last Name"
           name="lname"
         />
