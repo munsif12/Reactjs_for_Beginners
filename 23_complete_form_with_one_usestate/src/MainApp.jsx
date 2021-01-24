@@ -36,10 +36,27 @@ function MainApp() {
       // used object destriucturing to get rid of if else
       return {
         ...prevVal,
+        /*
+        fName: "";
+        lName: "";
+        email: "";
+        phone: ""; 
+       */
         [fieldName]: fieldVal,
+        /*for example fieldName=fname and fielsVal=muns
+        [fname]:muns
+        now fname is replaced with the new value and other props will remain same
+        
+        fName: "muns";
+        lName: "";
+        email: "";
+        phone: "";
+
+        this is the banifit of spread operator
+        */
       };
 
-      //   if (fieldName === "fname") {
+      // *** new becoz of spread opertor this whole if else statemt are nont n use ***      //   if (fieldName === "fname") {
       //     return {
       //       fName: fieldVal,
       //       lName: lastName, //fullname.lName;
