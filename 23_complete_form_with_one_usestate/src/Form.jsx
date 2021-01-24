@@ -1,7 +1,6 @@
 import React from "react";
 
 function Form(props) {
-  console.log(props);
   var {
     fName: firstName,
     lName: lastName,
@@ -18,7 +17,7 @@ function Form(props) {
           /* defaultValue="" */
           value={firstName}
           placeholder="Name"
-          name="fname"
+          name="fName"
         />
         <br />
         <input
@@ -28,7 +27,7 @@ function Form(props) {
           /* defaultValue="" */
           value={lastName}
           placeholder="Last Name"
-          name="lname"
+          name="lName"
         />
         <input
           id="txtField"

@@ -33,35 +33,41 @@ function MainApp() {
     var fieldName = e.target.name;
     var fieldVal = e.target.value;
     setDetails((prevVal) => {
-      if (fieldName === "fname") {
-        return {
-          fName: fieldVal,
-          lName: lastName, //fullname.lName;
-          email,
-          phone: phoneNumber,
-        };
-      } else if (fieldName === "lname") {
-        return {
-          fName: firstName, //fullname.fName;
-          lName: fieldVal,
-          email,
-          phone: phoneNumber,
-        };
-      } else if (fieldName === "email") {
-        return {
-          fName: firstName, //fullname.fName;
-          lName: lastName,
-          email: fieldVal,
-          phone: phoneNumber,
-        };
-      } else if (fieldName === "phone") {
-        return {
-          fName: firstName, //fullname.fName;
-          lName: lastName,
-          email,
-          phone: fieldVal,
-        };
-      }
+      // used object destriucturing to get rid of if else
+      return {
+        ...prevVal,
+        [fieldName]: fieldVal,
+      };
+
+      //   if (fieldName === "fname") {
+      //     return {
+      //       fName: fieldVal,
+      //       lName: lastName, //fullname.lName;
+      //       email,
+      //       phone: phoneNumber,
+      //     };
+      //   } else if (fieldName === "lname") {
+      //     return {
+      //       fName: firstName, //fullname.fName;
+      //       lName: fieldVal,
+      //       email,
+      //       phone: phoneNumber,
+      //     };
+      //   } else if (fieldName === "email") {
+      //     return {
+      //       fName: firstName, //fullname.fName;
+      //       lName: lastName,
+      //       email: fieldVal,
+      //       phone: phoneNumber,
+      //     };
+      //   } else if (fieldName === "phone") {
+      //     return {
+      //       fName: firstName, //fullname.fName;
+      //       lName: lastName,
+      //       email,
+      //       phone: fieldVal,
+      //     };
+      //   }
     });
   }
   function setUsernameOnTop(e) {
