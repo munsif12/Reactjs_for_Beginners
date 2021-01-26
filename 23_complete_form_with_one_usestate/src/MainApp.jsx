@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Form from "./Form";
+import SideDetails from "./SideDetails";
 function MainApp() {
   /* USESTAES */
   /* we can also pass objcts inside use state
@@ -15,17 +16,11 @@ function MainApp() {
   var {
     fName: firstName,
     lName: lastName,
-    email = "xyz@gmail.com",
-    phone: phoneNumber = "0333-34*****",
+    email,
+    phone: phoneNumber,
   } = details;
   //used object destructuring to get rid of .operator
   var [topDetails, setTopDetails] = useState(details);
-  var {
-    fName: Name,
-    lName: LastName,
-    email: Email,
-    phone: PhoneNo,
-  } = topDetails;
   //we are using onling one changeValue mthod to handle the changes made inside the textBox
   // before this method we were using changeValue method for ver textBox
   //becz of this we also get rid of decalring multiple useStates for each field name
@@ -99,26 +94,7 @@ function MainApp() {
   return (
     <>
       <div className="formCont">
-        <div className="Details">
-          <h3>Details:</h3>
-          <p>
-            <ul>
-              <li>
-                <span>{Name}</span>
-              </li>
-              <li>
-                <span>{LastName}</span>
-              </li>
-              <li>
-                <span>{Email}</span>
-              </li>
-              <li>
-                {" "}
-                <span>{PhoneNo}</span>
-              </li>
-            </ul>
-          </p>
-        </div>
+        <SideDetails obj={topDetails} />
         <h2 className="helloName">
           Hello ! {firstName} {lastName} {email} {phoneNumber}
         </h2>
