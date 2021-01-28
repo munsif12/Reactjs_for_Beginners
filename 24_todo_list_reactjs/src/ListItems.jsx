@@ -3,7 +3,16 @@ import React from "react";
 function ListItems(props) {
   return (
     <>
-      <li>{props.data}</li>
+      <div className="listData">
+        <span
+          onClick={() => {
+            props.removeItem(props.id);
+          }}
+        >
+          X
+        </span>
+        <li>{props.data}</li>
+      </div>
     </>
   );
 }

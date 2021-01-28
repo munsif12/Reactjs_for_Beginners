@@ -13,6 +13,19 @@ function AddItem() {
     });
     setListItem("");
   }
+  //deliing items in the list
+  function removeItem(id) {
+    console.log(id);
+    setItems((prevVal) => {
+      return prevVal.filter((currVal, index) => {
+        var res = index !== id;
+        console.log(items);
+        console.log(`result:${res} data: ${currVal} and index :${index}`);
+        console.log(`After ${items}`);
+        return res;
+      });
+    });
+  }
   return (
     <div className="inputField">
       <form onSubmit={enterValue}>
@@ -28,7 +41,14 @@ function AddItem() {
       </form>
       <ul>
         {items.map((currVal, index) => {
-          return <ListItems data={currVal} key={index} />;
+          return (
+            <ListItems
+              data={currVal}
+              key={index}
+              removeItem={removeItem}
+              id={index}
+            />
+          );
         })}
       </ul>
     </div>
