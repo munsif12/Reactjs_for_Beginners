@@ -1,17 +1,22 @@
 import React, { useState } from "react";
 import ListItems from "./ListItems";
 function AddItem() {
-  var [listItem, setListItem] = useState("");
+  var [listItem, setListItem] = useState(" ");
   var [items, setItems] = useState([]);
   function getInputValue(e) {
     setListItem(e.target.value);
   }
   function enterValue(e) {
-    e.preventDefault();
-    setItems((prevVal) => {
-      return [...prevVal, listItem];
-    });
-    setListItem("");
+    if (listItem === "" || listItem === null) {
+      alert("List can't be Null");
+      e.preventDefault();
+    } else {
+      setItems((prevVal) => {
+        return [...prevVal, listItem];
+      });
+      setListItem("");
+      e.preventDefault();
+    }
   }
   //deliing items in the list
   function removeItem(id) {
@@ -37,20 +42,23 @@ function AddItem() {
           value={listItem}
           placeholder="Add Item"
         />
-        <input type="submit" value="+" />
+        <input type="submit" value="+" id="addBtn" />
       </form>
-      <ul>
-        {items.map((currVal, index) => {
-          return (
-            <ListItems
-              data={currVal}
-              key={index}
-              removeItem={removeItem}
-              id={index}
-            />
-          );
-        })}
-      </ul>
+      <div className="listDataItems">
+        <ul>
+          {items.map((currVal, index) => {
+            return (
+              <ListItems
+                data={currVal}
+                key={index}
+                removeItem={removeItem}
+                id={index}
+                empty={listItem}
+              />
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 }

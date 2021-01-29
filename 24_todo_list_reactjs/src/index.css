@@ -5,15 +5,143 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-/* .listData{
+#root{
+  height:70vh;
+  width:45vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.mainDiv{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   flex-direction: column;
-} */
+  height:100%;width: 100%;
+}
+.header{
+  font-size: 22px;
+  background: #334455;
+  color: white;padding: 22px 30px 22px 30px;
+}
+.inputField{
+  margin-top: 20px;
+  height:80%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+form{
+  width: 90%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#addItem{
+  height: 100%;
+width: 80%;
+border-radius: 15px 0px 0px 15px;
+text-align: center;
+}
+#addBtn{
+  height: 105%;
+  width: 10%;
+  border-radius: 0px 15px 15px 0px;
+  font-size: 32px;
+  font-weight: bolder;
+  color: green;
+  outline: none;
+}
+#addItem,#addBtn{
+  
+  border: none;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background:transparent;
+  
+}
+.listDataItems{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 900%;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 8px;
+}
+ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+  width: 92%;
+  margin-left: 28px;
+  margin-top: 10px;
+}
+ .listData{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30px;
+  width: 85%;
+  padding: 5px;
+} 
+.remove{
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bolder;
+  color: red;
+  padding: 2px 4px 2px 4px;
+  border: 1px solid red;
+  margin-right: 5px;
+  text-align: center;
+  display: none;
+  
+}
+li{
+  list-style-type: none;
+}
+.listData:hover .remove{
+  transition: 0.7s ease;
+  display: block;
+}
+.listData:nth-child(odd){
+  background: rgba(167, 165, 165, 0.336);
+}
+.listDataItems::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (max-width:450px){
+  #root{
+    height: 65%;
+    width: 60%;
+  }
+  #addItem{
+    width: 80%;
+  }
+  #addBtn{
+    width: 20%;
+  }
+  ul{
+    margin-left: 0%;
+    width: 100%;
+  }
+}
