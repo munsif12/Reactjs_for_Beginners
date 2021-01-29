@@ -24,7 +24,6 @@ function AddItem() {
     setItems((prevVal) => {
       return prevVal.filter((currVal, index) => {
         var res = index !== id;
-        console.log(items);
         console.log(`result:${res} data: ${currVal} and index :${index}`);
         console.log(`After ${items}`);
         return res;
