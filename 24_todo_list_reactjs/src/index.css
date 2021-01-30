@@ -116,6 +116,9 @@ ul{
   display: none;
   
 }
+.remove:hover .list{
+  text-decoration: line-through;
+}
 li{
   list-style-type: none;
 }

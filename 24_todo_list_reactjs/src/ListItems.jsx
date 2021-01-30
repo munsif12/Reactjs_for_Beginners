@@ -12,7 +12,7 @@ function ListItems(props) {
         >
           X
         </span>
-        <li>
+        <li className="list">
           {props.id + 1} : {props.data}
         </li>
       </div>
