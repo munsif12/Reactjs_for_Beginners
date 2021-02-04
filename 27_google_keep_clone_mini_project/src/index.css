@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+#root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.navbarCont{
+  width: 100%; 
+  display:flex; 
+  justify-content: space-evenly;
+}
+nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.body{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.inputArea{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+form{
+  position: relative;
+  margin-top: 10px;
+  width: 100%;
+  height: 35vh;
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+}
+.title{
+  position: relative;
+  box-shadow: 0px 4px 8px 0px rgba(4, 0, 255, 0.2);
+}
+input{
+  width: 80%;
+  height: 12vh;
+  border: none;
+  outline: none;
+  word-break: break-all;
+  padding: 10px;
+  border-radius: 8px;
+}
+#submitButton{
+  position: absolute;
+  bottom: -45px;
+  cursor: pointer;
+}
+.discription,.submitButton{
+  display: none;
+}
+@media screen and (max-width:450px){
+  .inputArea{width: 70%;}
+  form{
+    height:30vh;
+  }
+  
+} 
+.userNotes{
+  margin-top: 20px;
+  width: 100%;
+}
+ul{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+li{
+  margin: 15px;
+  list-style-type: none;
+}
+.note{
+  position: relative;
+  width: 100%;
+  box-shadow: 0px 4px 8px 0px rgba(4, 0, 255, 0.2);
+  padding: 20px 15px ;
+  border-radius: 8px;
+}
+.deleteBtn{
+  position: absolute;
+  bottom: 5px;
+  right: 5%;
+  transform: scale(1.1);
+  color: rgb(255,193,7);
+  border-radius: 50%;
+  cursor: pointer;
+}
+@media screen and (min-width:750px){
+  .inputArea{
+    width: 50%;
+    height: 40vh;
+  }
+  
+} 
