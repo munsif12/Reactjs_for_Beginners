@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
 code {
@@ -56,11 +57,11 @@ form{
 }
 .title{
   position: relative;
-  box-shadow: 0px 4px 8px 0px rgba(4, 0, 255, 0.2);
+  box-shadow: 0px 4px 8px 0px rgba(4, 0, 255, 0.308);
 }
 input{
   width: 80%;
-  height: 12vh;
+  height: 0 auto;
   border: none;
   outline: none;
   word-break: break-all;
@@ -72,16 +73,31 @@ input{
   bottom: -45px;
   cursor: pointer;
 }
+.discription,.title{
+  margin-top: 40px;
+
+}
 .discription,.submitButton{
   display: none;
 }
-@media screen and (max-width:450px){
-  .inputArea{width: 70%;}
-  form{
-    height:30vh;
-  }
-  
-} 
+
+.firstWord{
+  color: rgb(255, 156, 7);
+}
+#quotetation{
+  position: relative;
+width: 80%;
+
+}
+.quotationMark{
+  margin-right: 15px;
+  margin-left: 15px;
+  color: rgb(255, 156, 7);
+}
+.quote_auther{
+  font-size: 18px;
+  margin-top: 25px;
+}
 .userNotes{
   margin-top: 20px;
   width: 100%;
@@ -99,6 +115,7 @@ li{
   list-style-type: none;
 }
 .note{
+  margin: 15px;
   position: relative;
   width: 100%;
   box-shadow: 0px 4px 8px 0px rgba(4, 0, 255, 0.2);
@@ -107,17 +124,81 @@ li{
 }
 .deleteBtn{
   position: absolute;
-  bottom: 5px;
+  bottom: -12%;
   right: 5%;
+  height: 30px;
+  width: 30px;
   transform: scale(1.1);
-  color: rgb(255,193,7);
+  color: rgb(255, 156, 7);
   border-radius: 50%;
   cursor: pointer;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
 }
+.noteNumber{
+  position: absolute;
+  top: -12%;
+  right: 5%;
+  height: 30px;
+  width: 30px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+}
+.noteNumber>.note_number_p{
+  font-size: 18px;
+  margin-top: 15px;
+  text-align: center;
+  color: rgb(255, 156, 7);
+  font-weight: bolder;
+}
+#footerCont{
+  width: 100%; 
+  display:flex; 
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 0 ;
+}
+@media screen and (max-width:450px){
+  .inputArea{width: 70%;}
+  form{
+    height:30vh;
+  }
+  .discription,.title{
+    margin-top: 20px;
+  }
+  #quotetation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    word-wrap: break-word;
+  }
+  .heading{
+    font-size: 15px;
+    word-break: break-all;
+  }
+  .quote_auther{
+    margin-top: 10%;
+  }
+  .navbar_cloneTitle,.footer_copyright{
+    font-size: 15px;
+  }
+  .navbarCont{
+    justify-content: space-between;
+  }
+} 
 @media screen and (min-width:750px){
   .inputArea{
     width: 50%;
     height: 40vh;
   }
-  
 } 

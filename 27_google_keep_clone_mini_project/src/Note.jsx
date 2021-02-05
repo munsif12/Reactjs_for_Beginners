@@ -4,6 +4,9 @@ function Note(props) {
   return (
     <li>
       <div className="note">
+        <div className="noteNumber">
+          <p className="note_number_p">{props.id}</p>
+        </div>
         <p
           style={{
             fontWeight: "bold",
@@ -17,7 +20,7 @@ function Note(props) {
         <div
           className="deleteBtn"
           onClick={() => {
-            props.deleteFunction(props.id);
+            props.deleteFunction(props.index);
           }}
         >
           <RestoreFromTrashIcon />

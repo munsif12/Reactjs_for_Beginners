@@ -14,6 +14,8 @@ function Form(props) {
           "display:inline;border-bottom:1px solid black;border-radius:0px";
         document.querySelector("form").style.cssText =
           "box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);";
+        document.getElementById("quotetation").style.display = "none";
+        document.getElementById("footerCont").style.display = "none";
         return true;
       } else {
         // window.addEventListener("click", () => {
@@ -60,7 +62,7 @@ function Form(props) {
         placeholder="Note Description"
         autoComplete="off"
         onChange={props.getValue}
-        value={props.value.disc}
+        value={props.value.discription}
       />
       <div id="submitButton">
         <Tooltip
