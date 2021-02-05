@@ -8,7 +8,9 @@ function Navbar() {
         <a class="navbar-brand" href="/#">
           <EmojiObjectsIcon style={{ color: "white", transform: "scale(2)" }} />
         </a>
-        <h2 class="navbar-brand ">Google Keep clone</h2>
+        <h2 class="navbar-brand " className="navbar_cloneTitle">
+          Google Keep clone
+        </h2>
       </nav>
     </div>
   );
