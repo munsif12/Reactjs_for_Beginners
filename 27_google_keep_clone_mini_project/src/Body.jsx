@@ -26,14 +26,23 @@ function Body() {
         return [...preVal, value];
       });
       setValue((preVal) => {
+        console.log(preVal);
         return {
           title: "",
+          discription: "",
         };
       });
     }
   }
   function deleteFunction(id) {
-    console.log(`Deleted div no ${id}`);
+    console.log(`Deleted div no ${id + 1}`);
+    console.log(arrayOfValues);
+    setArrayOfValues((preVal) => {
+      return preVal.filter((currVal, index) => {
+        return index !== id;
+      });
+    });
+    console.log(arrayOfValues);
   }
   return (
     <div className="body">
@@ -53,10 +62,26 @@ function Body() {
                 deleteFunction={deleteFunction}
                 id={index + 1}
                 key={index}
+                index={index}
               />
             );
           })}
         </ul>
+      </div>
+      <div id="quotetation">
+        <h3 className="heading">
+          <span className="quotationMark ">“</span>{" "}
+          <span className="firstWord">You</span> have to make your own condensed
+          notes. You learn from MAKING them. A lot of thinking goes into
+          deciding what to include and exclude. You develop your own system of
+          abbreviations and memory methods for the information.
+          <span className="quotationMark">”</span>
+        </h3>
+        <h6 style={{ textAlign: "center" }} className="quote_auther">
+          <span className="quotationMark ">
+            ― Peter Rogers, Straight A at Stanford and on to Harvard "
+          </span>
+        </h6>
       </div>
     </div>
   );
