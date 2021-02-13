@@ -25,9 +25,12 @@ function MainApp() {
   }, [Value]);
   return (
     <div className="mainApp">
+      <h1>POKEMON INFO USING REACT AXIOS API CALL</h1>
       <div className="name">
-        {" "}
-        I am : {CharacterName} and I have {CharacterMoves} moves
+        <p>
+          I am :s <span>{CharacterName}</span> and I have
+          <span>{CharacterMoves}</span> moves
+        </p>
       </div>
       <div className="select">
         <select
@@ -43,6 +46,11 @@ function MainApp() {
           <option value="3">3</option>
           <option value="4">4</option>
           <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="25">25</option>
+          <option value="30">30</option>
         </select>
       </div>
     </div>
