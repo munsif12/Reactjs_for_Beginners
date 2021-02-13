@@ -9,7 +9,12 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+.mainApp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -18,7 +23,28 @@ span{
   color: green;
   font-size: 22px;
   font-family: century gothic;
+  font-weight: bold;
 }
 p{
   text-align: center;
+}
+select{
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  outline: 2px solid green;
+  border: none;
+  font-size: 22px;
+  outline-style: dashed;
+  outline-offset: 5px;
+  background: rgba(161, 241, 161, 0.564);
+}
+h1{
+  color: green;
+  text-align: center;
+}
+img{
+  height: 200px;
+  width: 200px;
+  margin:10px;
 }
