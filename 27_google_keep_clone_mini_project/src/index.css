@@ -9,7 +9,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
 }
+/* .body {
+  overflow-x: hidden; /* Hide scrollbars */
 
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -47,7 +53,7 @@ nav{
 form{
   position: relative;
   margin-top: 10px;
-  width: 100%;
+  width: 95%;
   height: 35vh;
   display:flex;
   justify-content: flex-start;
@@ -194,6 +200,12 @@ li{
   }
   .navbarCont{
     justify-content: space-between;
+  }
+  ul{
+    margin: 0px 10px 5px -20px;
+  }
+  .note{
+    margin: 10px;
   }
 } 
 @media screen and (min-width:750px){
