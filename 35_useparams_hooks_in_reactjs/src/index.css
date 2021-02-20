@@ -42,14 +42,12 @@ padding: 0px 25px 0px 25px;
   font-weight: bold;
   position: relative;
   padding: 10px 20px;
-  box-shadow: 0px 0px 12px black;
   border-radius: 12px;
 }
 .activeClass{
   text-decoration: none;
   border-bottom: none;
-  transition: 0.8s ease-in;
-  padding: 10px 22px;
+  padding: 10px;
   border-radius: 12px;
   
 }
