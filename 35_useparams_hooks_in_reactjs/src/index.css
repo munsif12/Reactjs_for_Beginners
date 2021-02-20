@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+span{
+  color: blue;
+}
+.navbar{
+  width: 100vw;
+  background: gray;
+  display: flex;
+}
+#nav{
+  display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+}
+#nav>ul{
+  display: flex;
+justify-content:space-between;
+align-items: center;
+width: 100%;
+padding-left: 0;
+padding: 0px 25px 0px 25px;
+}
+#nav>ul>li{
+  list-style-type: none;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 12px black;
+  border-radius: 12px;
+}
+.activeClass{
+  text-decoration: none;
+  border-bottom: none;
+  transition: 0.8s ease-in;
+  padding: 10px 22px;
+  border-radius: 12px;
+  
+}
+.activeClass::after{
+  position: absolute;
+  content: "";
+  bottom: -5px;
+  left: 0;
+  height: 10%;
+  width: 80%;
+  background: white;
+  margin-left: 10%;
+}
+a{
+  text-decoration: none;
+}
+.topicDetails{
+  background: lightgray;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.body{
+  position: relative;
+  background: rgb(160, 158, 158);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+.homePage>h1{
+  position: absolute;
+}
+.homePage,.contectPage,.aboutPage,.userPage{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.homePage>img{
+  height: 100%;
+  width: 100%;
+}
+.aboutPage>h1{
+  position: absolute;
+}
+.aboutPage>img{
+  height: 100%;
+  width: 100%;
+}
+.contectPage>h1{
+  position: absolute;
+}
+.contectPage>img{
+  height: 100%;
+  width: 100%;
+}
+.userPage>h1{
+  position: absolute;
+}
+.userPage>h2{
+  position: absolute;
+  top: 50px;
+}
+.userPage>img{
+  height: 100%;
+  width: 100%;
+}
