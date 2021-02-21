@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import userPagePicture from "./user-avatars-pack.jpg";
-import singleuserPicture from "./singleuser.jpg";
 function User(props) {
   useEffect(() => {
     alert("Please Change he url to user/anyName");
