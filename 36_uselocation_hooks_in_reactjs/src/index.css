@@ -63,6 +63,7 @@ padding: 0px 25px 0px 25px;
 }
 a{
   text-decoration: none;
+  color: white;
 }
 .topicDetails{
   background: lightgray;
@@ -118,6 +119,9 @@ a{
   height: 100%;
   width: 100%;
 }
+.impNav{
+  border: 2px solid rgb(229, 255, 0);
+}
 .welcomeDetails{
   position: absolute;
   top: 120px;
@@ -129,12 +133,14 @@ a{
   flex-direction: column;
   box-shadow: 0px 0px 8px black;
   border-radius: 15px;
+  border: none;
 }
 .welcomeDetails>button{
   height: 25px;
-  width: 80px;
+  width: 120px;
   padding: 5px 11px;
   background: transparent;
   border-radius: 12px;
   outline: none;
+  border: 1px solid black;
 }

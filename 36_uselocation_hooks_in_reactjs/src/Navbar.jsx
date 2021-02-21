@@ -15,7 +15,7 @@ function Navbar() {
               About
             </NavLink>
           </li>
-          <li>
+          <li className="impNav">
             <NavLink exact activeClassName="activeClass" to="/user">
               User
             </NavLink>

@@ -13,8 +13,17 @@ function MainPage() {
         <h3>UseLocation Hooks in Reactjs</h3>
         <ul>
           <li>useLocation. Returns the location to any component.</li>
-          <li>useparams are use get value of the url of the dynamic contect</li>
-          <li>like i created a page user/etcUserName change the url to see</li>
+          <li>
+            The useLocation hook returns the location object that represents the
+            current URL.
+          </li>
+          <li>
+            like i used useLocation to show spacific data to specific people
+          </li>
+          <li>
+            write /user/munsif,hamza,kazmii to show the specific data else other
+            names will get normal data
+          </li>
           <li>
             Example:
             <ul>
@@ -23,7 +32,13 @@ function MainPage() {
                 <span>path="/user/:userName"</span>{" "}
                 {'component={() => <User pageName="User" />} /> '}
               </li>
-              <li>{" const locaton = useLocation();"}</li>
+              <li>
+                <span>
+                  import{" { useParams, useLocation } "} from
+                  "react-router-dom";
+                </span>
+              </li>
+              <li>{<span> const locaton = useLocation();</span>}</li>
               <li>
                 {"{arrayOfUsers.includes(locaton.pathname) ? ("} <br />
                 {' <div className="welcomeDetails">'} <br />
@@ -56,8 +71,8 @@ function MainPage() {
             path="/user"
             component={() => <User pageName="User" />}
           />
+          agr ham exact likhy ga to hamy 1 naya rote banana pary ga
           <Route
-            exact
             path="/user/:userName"
             component={() => <User pageName="User" />}
           />

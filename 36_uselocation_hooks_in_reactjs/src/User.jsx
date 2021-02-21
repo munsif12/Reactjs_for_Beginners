@@ -3,7 +3,9 @@ import { useParams, useLocation } from "react-router-dom";
 import userPagePicture from "./user-avatars-pack.jpg";
 function User(props) {
   useEffect(() => {
-    alert("Please Change he url to user/anyName");
+    alert(
+      "Please Change the url to user/anyName or /munsif,hamza,kazmii to see magic"
+    );
   }, []);
   const arrayOfUsers = [
     "/user/munsif",
@@ -11,24 +13,20 @@ function User(props) {
     "/user/kazmii",
     "/user/arslan",
   ];
-  console.log(arrayOfUsers);
   const { userName } = useParams();
   const locaton = useLocation();
-  var index = arrayOfUsers.map((val, index) => {
-    if (locaton.pathname === val) {
-      return index;
-    } else return false;
-  });
-  console.log(index);
+  console.log(userName);
   return (
     <div className="userPage">
-      <h1>This is {props.pathname} page</h1>
-      {userName === null ? null : <h2>Welcome {userName}! </h2>}
+      <h1>This is {props.pageName} page</h1>
+      {userName === null || userName === undefined ? null : (
+        <h2>Welcome {userName}! </h2>
+      )}
       {arrayOfUsers.includes(locaton.pathname) ? (
         <div className="welcomeDetails">
           <h2>Hello {locaton.pathname}</h2>,
           <button onClick={() => alert("you are Premium user")}>
-            Click me
+            Click me!
           </button>
         </div>
       ) : null}
