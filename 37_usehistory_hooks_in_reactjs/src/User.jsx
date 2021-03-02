@@ -12,6 +12,7 @@ function User(props) {
     "/user/hamza",
     "/user/kazmii",
     "/user/arslan",
+    "/user/abcd",
   ];
   const { userName } = useParams();
   const locaton = useLocation();
