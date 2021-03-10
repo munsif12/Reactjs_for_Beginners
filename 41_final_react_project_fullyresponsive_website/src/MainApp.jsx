@@ -5,6 +5,7 @@ import Page from "./Page";
 import SvgHome from "./SvgHome";
 import SvgAbout from "./SvgAbout";
 import Contect from "./Contect";
+import Footer from "./Footer";
 function MainApp() {
   return (
     <div className="mainApp">
@@ -54,6 +55,7 @@ function MainApp() {
           }}
         />
       </Switch>
+      <Footer />
     </div>
   );
 }

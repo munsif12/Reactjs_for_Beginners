@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 function Page({
   pageName,
   moto,
@@ -7,6 +8,7 @@ function Page({
   SvgHome,
   buttenInnerText,
 }) {
+  const history = useHistory();
   return (
     <div className="page">
       <div className="leftDetails">
@@ -21,7 +23,17 @@ function Page({
             <p className="aboutParagraph">{about}</p>
           </div>
           <div className="getStarted">
-            <button>{buttenInnerText}</button>
+            {pageName === "About" ? (
+              <button
+                onClick={() => {
+                  history.push("/contect");
+                }}
+              >
+                {buttenInnerText}
+              </button>
+            ) : (
+              <button>{buttenInnerText}</button>
+            )}
           </div>
         </div>
       </div>
