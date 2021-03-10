@@ -7,7 +7,7 @@ body {
   box-sizing: border-box;
 }
 #root {
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -32,7 +32,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 h1 {
   font-weight: lighter;
@@ -43,6 +43,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 5%;
 }
 ul {
   display: flex;
@@ -66,16 +67,226 @@ li {
 
 /* bodyPage styling */
 
-.home {
+.page {
   min-height: 70vh;
-  width: 100%;
-  background-color: lightgray;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "leftDetails rightLogo";
 }
+/* working on left Details */
+.leftDetails {
+  grid-area: leftDetails;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 0;
+}
+.leftDetails :is(p) {
+  margin: 0;
+  font-weight: normal;
+}
+.moto,
+.companyName {
+  font-size: 32px;
+}
+.companyName {
+  color: blue;
+}
+.aboutCompany {
+  margin: 25px 0px 25px 0px;
+}
+
+button {
+  background: transparent;
+  padding: 10px 22px;
+  outline: none;
+  border: 1px solid blue;
+  border-radius: 15px;
+  color: blue;
+  letter-spacing: 1px;
+}
+.rightLogo {
+  grid-area: rightLogo;
+  animation: topBottom 1s linear infinite;
+  transform: translateY(50px);
+}
+
+/* styling the contect us page  */
+::placeholder {
+  padding: 0px 0px 0px 10px;
+}
+.contectUs {
+  min-height: 70vh;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.formWrapper {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.heading p {
+  color: black;
+  margin: 0;
+  font-size: 32px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+.name,
+.phone,
+.email,
+.message {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 8px;
+}
+.submit {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 20px 0px 0px 0px;
+}
+.submitbtn {
+  height: 6vh;
+  width: 12vw;
+  border: none;
+  outline: none;
+  background: transparent;
+  border: 1px solid blue;
+  border-radius: 8px;
+  color: blue;
+  letter-spacing: 4px;
+}
+.name input,
+.phone input,
+.email input {
+  height: 5vh;
+  outline: none;
+  border: 1px solid black;
+  box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+}
+.message textarea {
+  height: 10vh;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: s 0px 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.lableTag {
+  margin: 5px 0px 5px 0px;
+  font-size: 16px;
+}
+/* @keyframes topBottom {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+} */
 @media screen and (max-width: 1000px) {
   h1 {
     font-size: 22px;
   }
   li {
     padding: 0px 2px;
+  }
+  .aTag {
+    font-size: 15px;
+    padding: 0px 0px 3px 0px;
+  }
+  .moto,
+  .companyName {
+    font-size: 22px;
+  }
+  .aboutCompany {
+    margin: 15px 0px 15px 0px;
+  }
+  /* contect us  */
+  .formWrapper {
+    width: 90%;
+  }
+  .heading p {
+    font-size: 22px;
+  }
+  .lableTag {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 15px;
+  }
+  li {
+    padding: 0px 2px;
+  }
+  .aTag {
+    font-size: 10px;
+    padding: 0px 0px 2px 0px;
+  }
+  .page {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "leftDetails" "rightLogo";
+  }
+  .moto,
+  .companyName {
+    font-size: 22px;
+  }
+  .leftDetails {
+    align-items: center;
+  }
+  .aboutCompany {
+    margin: 15px 0px 15px 0px;
+  }
+  .rightLogo {
+    transform: translateY(0px);
+  }
+  /* contect us */
+  .heading {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .name,
+  .phone,
+  .email,
+  .message,
+  .submit {
+    width: 80%;
+  }
+  .submit {
+    align-items: center;
+  }
+  .submitbtn {
+    width: 25vw;
+    font-size: 12px;
+  }
+  ::placeholder {
+    font-size: 11px;
   }
 }
