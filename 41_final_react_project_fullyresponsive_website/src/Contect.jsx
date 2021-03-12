@@ -7,7 +7,7 @@ function Contect() {
     email: "",
     message: "",
   });
-  const { name, phone, email, message } = FormFields;
+  const { name, phoneNumber: phone, email, message } = FormFields;
   function handleChange(e) {
     const userValue = e.target.value;
     const currFieldName = e.target.name;
@@ -18,14 +18,20 @@ function Contect() {
       };
     });
   }
-  console.log(FormFields);
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(FormFields);
+    alert(
+      `Your name is ${name} your phone number is ${phone} your email is ${email} and your msg is ${message}`
+    );
+  }
   return (
     <div className="contectUs">
       <div className="heading">
         <p style={{ color: "black" }}>Contect Us</p>
       </div>
       <div className="formWrapper">
-        <form action="" method="GET">
+        <form action="" method="GET" onSubmit={handleSubmit}>
           <div className="name">
             <div className="lableTag">
               <lable>Full Name</lable>
@@ -34,6 +40,7 @@ function Contect() {
               type="text"
               name="name"
               id="name"
+              spellCheck="true"
               value={name}
               onChange={handleChange}
               placeholder=" Your Name here..."
@@ -77,16 +84,7 @@ function Contect() {
             />
           </div>
           <div className="submit">
-            <input
-              type="submit"
-              value="Submit"
-              className="submitbtn"
-              onSubmit={() => {
-                alert(
-                  `your name is ${name} your phone number is ${phone} your email is ${email} and your msg is ${message}`
-                );
-              }}
-            />
+            <input type="submit" value="Submit" className="submitbtn" />
           </div>
         </form>
       </div>
