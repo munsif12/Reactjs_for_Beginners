@@ -10,6 +10,7 @@ function Navbar() {
         <ul>
           <li className="list1">
             <NavLink
+              style={{ textDecoration: "none", color: "black" }}
               exact
               to="/"
               activeClassName="activeClass"
@@ -20,8 +21,9 @@ function Navbar() {
           </li>
           <li className="list2">
             <NavLink
+              style={{ textDecoration: "none", color: "black" }}
               exact
-              to="/projects"
+              to="/services"
               activeClassName="activeClass"
               className="aTag"
             >
@@ -30,6 +32,7 @@ function Navbar() {
           </li>
           <li className="list3">
             <NavLink
+              style={{ textDecoration: "none", color: "black" }}
               exact
               to="/about"
               activeClassName="activeClass"
@@ -40,6 +43,7 @@ function Navbar() {
           </li>
           <li className="list4">
             <NavLink
+              style={{ textDecoration: "none", color: "black" }}
               exact
               to="/contect"
               activeClassName="activeClass"
