@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { useHistory } from "react-router-dom";
 function Page({
   pageName,
@@ -32,7 +32,13 @@ function Page({
                 {buttenInnerText}
               </button>
             ) : (
-              <button>{buttenInnerText}</button>
+              <button
+                onClick={() => {
+                  history.push("/services");
+                }}
+              >
+                {buttenInnerText}
+              </button>
             )}
           </div>
         </div>
@@ -43,5 +49,17 @@ function Page({
     </div>
   );
 }
+/* agr mara prop ke value change na hony ka bawajood agr component render horha h or ham chahty ha ka
+ hamra component use waqt render ho jab hamry props updateho to iseleya hamn MEMO use
+  krty h ya hamary component ko us waqt render kry ga jab props update hongy memo ko
+   use karny ka leya hamy components ko memo sa wrap krna hoga  
+   EXAMPLE :-
+   const componentA= memo( (props)=>{
+     return <h1>Hello Memo World</h1>
+   } );
+   if yo are not using arror function then wrap it when ur exporting the function
 
-export default Page;
+   export default memo(Page);
+    */
+
+export default memo(Page);
