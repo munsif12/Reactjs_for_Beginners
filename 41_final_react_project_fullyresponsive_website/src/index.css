@@ -1,13 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&family=Open+Sans+Condensed:wght@300&display=swap");
 :root {
   --mainColor: blue;
 }
 * {
   margin: 0;
   font-family: "Open Sans Condensed", sans-serif;
+  /* font-family: "DotGothic16", sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 0;
   box-sizing: border-box;
+  font-weight: bold;
 }
 .mainApp {
   min-height: 100vh; /*to stick footer to bootm and to get minHeight and if content is higher the 100vh it will expand*/
@@ -20,20 +23,30 @@
 
 /* naverBar styling */
 .navbar {
+  /* position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
+
+  /* position: relative; */
+  display: flex;
+  width: 100%;
+  align-items: start;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
 }
 .leftLogo {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-left: 5%;
+  margin-top: 0.2%;
 }
 h1 {
-  font-weight: lighter;
+  font-weight: bold;
   white-space: nowrap;
+  font-size: 32px;
 }
 .rightNavElements {
   height: 100%;
@@ -41,11 +54,31 @@ h1 {
   justify-content: center;
   align-items: center;
   margin-right: 5%;
+  /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.toggleButton {
+  display: none;
+  position: absolute;
+  margin-top: auto;
+  right: 5%;
+}
+.toggleButton :is(.line1, .line2, .line3) {
+  width: 30px;
+  height: 7px;
+  margin: 2px;
+  background: black;
+  border-radius: 10px;
+  transition: 1s ease;
 }
 ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  /*
+    justify-content: center;
+    align-items: center; */
 }
 li {
   list-style-type: none;
@@ -57,9 +90,10 @@ li {
   text-decoration: none;
   font-size: 18px;
   padding: 0px 0px 4px 0px;
+  letter-spacing: 2px;
 }
 .activeClass {
-  border-bottom: 2px solid black;
+  border-bottom: 4px solid black;
 }
 
 /* bodyPage styling */
@@ -269,12 +303,24 @@ form {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 30px 20px;
   margin-bottom: 10%;
 }
 .card {
   border-radius: 15px;
   overflow: hidden;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.34);
+  /* position: relative;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 .teamMembers {
   font-size: 32px;
@@ -286,7 +332,8 @@ form {
 }
 .card img {
   height: 200px;
-  width: 300px;
+  width: 200px;
+  border-radius: 50%;
 }
 .card a {
   text-decoration: none;
@@ -313,8 +360,12 @@ form {
   align-items: center;
   background: black;
   padding: 10px;
+  border-radius: 15px;
+  width: 100%;
 }
 .btnDiv > button {
+  /* color: black;
+  border: 1px solid black; */
   color: white;
   border: 1px solid white;
   background: transparent;
@@ -343,11 +394,13 @@ a:hover {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5em 0.5em;
+  gap: 2em 1em;
 }
-.servicesWrapper :is(p) {
+.servicesWrapper :is(.service_title, .service_number) {
   margin: 0;
   padding: 0;
+  letter-spacing: 4px;
+  word-spacing: 2px;
 }
 .servicesWrapper > * {
   flex: 1 1 250px;
@@ -379,15 +432,18 @@ a:hover {
 .service {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 12px 6px rgb(0 0 0 / 34%);
 }
 .service:hover .hoverCard {
   transform: translateX(0%);
 }
 .hoverCard {
+  all: unset;
   position: absolute;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   height: 100%;
   width: 100%;
@@ -396,8 +452,13 @@ a:hover {
   top: 0;
   left: 0;
   transition: 1s ease-in;
-  border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 5px;
+  letter-spacing: 4px;
+  padding: 5px;
+}
+.hoverCard p {
+  font-size: 12px;
+  padding: 2px 5px 2px 5px;
 }
 .underCons {
   font-size: 1.5rem;
@@ -439,13 +500,13 @@ a:hover {
 }
 @media screen and (max-width: 600px) {
   body :is(h1) {
-    font-size: 12px;
+    font-size: 20px;
   }
   li {
     padding: 0px 2px;
   }
   .aTag {
-    font-size: 10px;
+    font-size: 20px;
     padding: 0px 0px 2px 0px;
   }
   .page {
@@ -525,5 +586,41 @@ a:hover {
   }
   .services {
     margin-bottom: 30px;
+  }
+  /* NAVBAR BURGER */
+  .navbar {
+    display: block;
+    background: lightgray;
+  }
+  .rightNavElements {
+    display: none;
+  }
+  ul {
+    width: 100vw;
+    display: block;
+  }
+  li {
+    text-align: center;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .leftLogo {
+    margin-left: 2%;
+  }
+  .toggleButton {
+    position: absolute;
+    display: inline;
+    top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 600px) {
+  .rightNavElements {
+    display: block;
   }
 }
