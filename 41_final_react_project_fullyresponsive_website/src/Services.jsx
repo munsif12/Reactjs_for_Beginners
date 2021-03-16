@@ -8,10 +8,13 @@ function Services() {
         {/* card 1 start */}
         {ServicesData.map((val, index) => {
           return (
+
             <ServiceCard
               sName={val.sName}
+              sImg={val.sImg}
               modeifiedClassName={"service service" + ++index}
               sNo={++index}
+              key={++index}
             />
           );
         })}
