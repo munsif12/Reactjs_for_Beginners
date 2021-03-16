@@ -1,15 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import JokerImg from "./empImages/2106477.jpg";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import FacebookIcon from "@material-ui/icons/Facebook";
-function Team({ empName, jobTitle, university }) {
+function Team({ empName, jobTitle, university, empImage }) {
   return (
     <div class="card">
       <div className="imgCont" back>
-        <img src={JokerImg} alt="John" />
+        <img src={empImage} alt="John" />
       </div>
       <div className="empDetails">
         <div className="empName">
