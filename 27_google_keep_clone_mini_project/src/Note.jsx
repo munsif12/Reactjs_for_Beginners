@@ -12,6 +12,7 @@ function Note(props) {
             fontWeight: "bold",
             fontSize: "18px",
             textTransform: "capitalize",
+            wordBreak: "break-word"
           }}
         >
           {props.val.title}

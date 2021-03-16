@@ -9,8 +9,7 @@ function Footer() {
           <CopyrightIcon style={{ color: "white", transform: "scale(2)" }} />
         </a>
         <h2 class="navbar-brand " className="footer_copyright">
-          {" "}
-          &copy; 2009 Munsif Ali Misri
+          &copy; Munsif Ali Misri {new Date().getFullYear()}
         </h2>
       </nav>
     </div>

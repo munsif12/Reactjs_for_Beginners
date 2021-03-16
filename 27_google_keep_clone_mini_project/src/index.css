@@ -1,9 +1,9 @@
 body {
   margin: 0;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,60 +12,61 @@ body {
 /* .body {
   overflow-x: hidden; /* Hide scrollbars */
 
-  body::-webkit-scrollbar {
-    display: none;
-  }
-  
+body::-webkit-scrollbar {
+  display: none;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-#root{
+#root {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  min-height: 100vh;
 }
-.navbarCont{
-  width: 100%; 
-  display:flex; 
+.navbarCont {
+  width: 100%;
+  display: flex;
   justify-content: space-evenly;
 }
-nav{
+nav {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-.body{
+.body {
   width: 100%;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-top: 10px;
 }
-.inputArea{
-  display:flex;
+.inputArea {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-form{
+form {
   position: relative;
   margin-top: 10px;
   width: 95%;
   height: 35vh;
-  display:flex;
+  display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   border-radius: 15px;
 }
-.title{
+.title {
   position: relative;
   box-shadow: 0px 4px 8px 0px rgba(4, 0, 255, 0.308);
 }
-input{
+input {
   width: 80%;
   height: 0 auto;
   border: none;
@@ -74,41 +75,41 @@ input{
   padding: 10px;
   border-radius: 8px;
 }
-#submitButton{
+#submitButton {
   position: absolute;
   bottom: -45px;
   cursor: pointer;
 }
-.discription,.title{
+.discription,
+.title {
   margin-top: 40px;
-
 }
-.discription,.submitButton{
+.discription,
+.submitButton {
   display: none;
 }
 
-.firstWord{
+.firstWord {
   color: rgb(255, 156, 7);
 }
-#quotetation{
+#quotetation {
   position: relative;
-width: 80%;
-
+  width: 80%;
 }
-.quotationMark{
+.quotationMark {
   margin-right: 15px;
   margin-left: 15px;
   color: rgb(255, 156, 7);
 }
-.quote_auther{
+.quote_auther {
   font-size: 18px;
   margin-top: 25px;
 }
-.userNotes{
+.userNotes {
   margin-top: 20px;
   width: 100%;
 }
-ul{
+ul {
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -116,19 +117,19 @@ ul{
   flex-wrap: wrap;
   margin: 10px;
 }
-li{
+li {
   margin: 15px;
   list-style-type: none;
 }
-.note{
+.note {
   margin: 15px;
   position: relative;
   width: 100%;
   box-shadow: 0px 4px 8px 0px rgba(4, 0, 255, 0.2);
-  padding: 20px 15px ;
+  padding: 20px 15px;
   border-radius: 8px;
 }
-.deleteBtn{
+.deleteBtn {
   position: absolute;
   bottom: -12%;
   right: 5%;
@@ -144,7 +145,7 @@ li{
   align-items: center;
   background: white;
 }
-.noteNumber{
+.noteNumber {
   position: absolute;
   top: -12%;
   right: 5%;
@@ -158,59 +159,62 @@ li{
   flex-direction: column;
   background: white;
 }
-.noteNumber>.note_number_p{
+.noteNumber > .note_number_p {
   font-size: 18px;
   margin-top: 15px;
   text-align: center;
   color: rgb(255, 156, 7);
   font-weight: bolder;
 }
-#footerCont{
-  width: 100%; 
-  display:flex; 
+#footerCont {
+  width: 100%;
+  display: flex;
   justify-content: space-evenly;
-  position: absolute;
-  bottom: 0 ;
+  margin-top: auto;
 }
-@media screen and (max-width:450px){
-  .inputArea{width: 70%;}
-  form{
-    height:30vh;
+@media screen and (max-width: 450px) {
+  .inputArea {
+    width: 70%;
   }
-  .discription,.title{
+  form {
+    height: 30vh;
+  }
+  .discription,
+  .title {
     margin-top: 20px;
   }
-  #quotetation{
+  #quotetation {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 90%;
     word-wrap: break-word;
   }
-  .heading{
+  .heading {
     font-size: 15px;
     word-break: break-all;
   }
-  .quote_auther{
+  .quote_auther {
     margin-top: 10%;
   }
-  .navbar_cloneTitle,.footer_copyright{
+  .navbar_cloneTitle,
+  .footer_copyright {
     font-size: 15px;
   }
-  .navbarCont{
+  .navbarCont {
     justify-content: space-between;
   }
-  ul{
+  ul {
     margin: 0px 10px 5px -20px;
   }
-  .note{
+  .note {
     margin: 10px;
   }
-} 
-@media screen and (min-width:750px){
-  .inputArea{
+}
+@media screen and (min-width: 750px) {
+  .inputArea {
     width: 50%;
     height: 40vh;
   }
-} 
+}

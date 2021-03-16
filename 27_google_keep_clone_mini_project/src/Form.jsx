@@ -15,7 +15,6 @@ function Form(props) {
         document.querySelector("form").style.cssText =
           "box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);";
         document.getElementById("quotetation").style.display = "none";
-        document.getElementById("footerCont").style.display = "none";
         return true;
       } else {
         // window.addEventListener("click", () => {
