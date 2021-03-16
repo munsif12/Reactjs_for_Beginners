@@ -1,21 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 function Navbar() {
   const [Display, setDisplay] = useState(false);
-  useEffect(() => {
-    console.log("running Efffect")
-    const currentDisplayProp = document.getElementById("rightNavElements").style.display;
-    console.log(currentDisplayProp)
-  });
   function toggleNavbar() {
     const toggleBtn = document.getElementById("hamburger");
     toggleBtn.addEventListener("click", () => {
-      if (!Display) {
-        console.log(Display)
+      if (!Display) { /* if hamburger opens  */
+        document.getElementById("hamburger").style.cssText = "transform:rotate(-45deg);";
+        document.getElementById("h_bar1").style.cssText = "transform:rotate(-90deg);width:15px;";
+        document.getElementById("h_bar3").style.cssText = "transform:rotate(-90deg);width:15px;";
         document.getElementById("rightNavElements").style.display = "block";
         setDisplay(true);
       }
-      else {
+      else {  /* if hamburger closes  */
+        document.getElementById("hamburger").style.cssText = "transform:rotate(0deg);";
+        document.getElementById("h_bar1").style.cssText = "transform:rotate(0deg);width:15px;";
+        document.getElementById("h_bar2").style.display = "block";
+        document.getElementById("h_bar3").style.cssText = "transform:rotate(0deg);width:15px;";
         document.getElementById("rightNavElements").style.display = "none";
         setDisplay(false);
       }
@@ -28,13 +29,13 @@ function Navbar() {
         <h1>Munsif Ali Misri</h1>
       </div>
       <NavLink to="#" className="toggleButton" onClick={toggleNavbar} id="hamburger">
-        <div className="line1"></div>
-        <div className="line2"></div>
-        <div className="line3"></div>
+        <div className="line1" id="h_bar1"></div>
+        <div className="line2" id="h_bar2"></div>
+        <div className="line3" id="h_bar3"></div>
       </NavLink>
       <div className="rightNavElements" id="rightNavElements">
         <ul>
-          <li className="list1">
+          <li className="list1" >
             <NavLink
               style={{ textDecoration: "none", color: "black" }}
               exact
@@ -45,7 +46,7 @@ function Navbar() {
               Home
             </NavLink>
           </li>
-          <li className="list2">
+          <li className="list2" >
             <NavLink
               style={{ textDecoration: "none", color: "black" }}
               exact
@@ -53,10 +54,10 @@ function Navbar() {
               activeClassName="activeClass"
               className="aTag"
             >
-              Projects
+              Services
             </NavLink>
           </li>
-          <li className="list3">
+          <li className="list3" >
             <NavLink
               style={{ textDecoration: "none", color: "black" }}
               exact
@@ -68,6 +69,17 @@ function Navbar() {
             </NavLink>
           </li>
           <li className="list4">
+            <NavLink
+              style={{ textDecoration: "none", color: "black" }}
+              exact
+              to="/team"
+              activeClassName="activeClass"
+              className="aTag"
+            >
+              Team
+            </NavLink>
+          </li>
+          <li className="list5">
             <NavLink
               style={{ textDecoration: "none", color: "black" }}
               exact
